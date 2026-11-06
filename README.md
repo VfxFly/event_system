@@ -1,5 +1,5 @@
 # event_system
-single header event system impl. without dependencies
+single header event system impl. without dependencies | std20+
 
 defination event traits:
 ```
