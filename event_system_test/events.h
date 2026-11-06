@@ -47,15 +47,17 @@ namespace mvm
 
         if constexpr (std::is_same_v<result_t, bool>)
         {
+            bool output = false;
+
             for (const auto callback : event_list<ev>)
             {
                 if (callback(a...))
                 {
-                    return true;
+                    output = true;
                 }
             }
 
-            return false;
+            return output;
         }
         else
         {
