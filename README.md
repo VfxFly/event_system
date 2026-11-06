@@ -4,13 +4,16 @@ single header event system impl. without dependencies
 defination event traits:
 ```
   ...
-  event_traits(on_action, void(*)(some_object*))
+  namespace some_object_events
+  {
+    event_traits(on_action, void(*)(some_object*));
+  }
   ...
 ```
 or
 ```
   ...
-  event_traits_in(some_object_events, on_action, void(*)(some_object*))
+  event_traits_in(some_object_events, on_action, void(*)(some_object*));
   ...
 ```
 
